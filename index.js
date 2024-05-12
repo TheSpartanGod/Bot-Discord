@@ -1,4 +1,3 @@
-
 const { Client, GatewayIntentBits, ActivityType, TextChannel } = require('discord.js');
 require('dotenv').config();
 const express = require('express');
@@ -19,9 +18,7 @@ app.listen(port, () => {
   console.log(`🔗 Powered By TheSpartanGod`);
 });
 
-
 const statusMessages = ["I AM ATOMIC"];
-
 
 let currentIndex = 0;
 const channelId = '';
@@ -44,7 +41,6 @@ function updateStatusAndSendMessages() {
     activities: [{ name: currentStatus, type: ActivityType.Custom}],
     status: 'dnd',
   });
-
   
   const textChannel = client.channels.cache.get(channelId);
 
